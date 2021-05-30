@@ -1,0 +1,458 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, body *{
+    /* font-family: 'Roboto', sans-serif !important; */
+    font-family: 'Arima Madurai', cursive;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* font-weight: 200; */
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.red { color: #FF5049 !important; }
+.red-focus:focus {
+    /* outline: none; */
+    
+    border: 1px solid #FF5049 !important; }
+
+header{
+    /* background: #3e3e3e; */
+    /* display: flex; */
+    height: 15rem;
+    width: 100%; 
+    background: #333 url(../img/bg3.jpg)  center center/cover;
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background-clip: unset; */
+    /* font-family: Open Sans; */
+    color: #fff;
+    
+}
+
+
+/* container */
+
+.container  {
+    display: flex;
+    max-width: 70%;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    /* margin-top: 1rem; */
+    /* background: rgba(24, 23, 23, 0.5); */
+    
+}
+
+.budget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+/* 
+.budget > * {
+    /* width: 100%; */
+    /* height: 1rem; }*/
+
+
+.budget__title{
+    color: aliceblue;
+    /* font-family: Open Sans; */
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.budget__value{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.budget__income{
+    display: flex;
+    /* align-items: center; */
+    /* height: 5rem; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin: auto; */
+    text-transform: uppercase;
+    /* width: 8rem; */
+    
+
+}
+
+.budget__income > div {
+    /* display: inline-flex; */
+    width: 6rem;
+    /* height: 2rem; */
+    padding: 1rem;
+    /* margin: auto; */
+    background-color: rgba(63, 44, 44, 0.5);
+    font-size: .8rem;
+    background-color: #28B9B5;
+    /* flex: 2; */
+    
+}
+
+
+
+
+
+.budget__expenses{
+    margin-top: .5rem;
+    display: flex;
+    /* height: 3rem; */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    
+}
+
+
+.budget__expenses > div {
+    /* display: inline-flex; */
+    width: 6rem;
+    /* height: 2rem; */
+    padding: 1rem;
+    /* margin: auto; */
+    /* background-color: rgba(63, 44, 44, 0.5); */
+    font-size: .8rem;
+    background-color: #FF5049;
+    /* flex: 2; */
+}
+
+.budget__income > div:last-child,
+.budget__expenses > div:last-child{
+    width: 4rem;
+}
+
+.budget__income > div:nth-child(2),
+.budget__expenses > div:nth-child(2){
+    width: 8rem;
+}
+
+.budget__income--text,
+.budget__expenses--text{
+    color: #333;
+   /* border : 1px solid black; */
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.budget__income--percentage,
+.budget__expenses--percentage{
+    border-radius: 0 .5rem .5rem 0;
+}
+
+.budget__income .budget__income--value,
+.budget__expenses .budget__expenses--value{
+    text-align: right;
+}
+
+.budget__expenses .budget__expenses--percentage  {
+    background-color: rgba(0,39, 49, 0.322);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    
+    text-align: center;
+    
+}
+/* {
+    background-color: rgba(13, 29, 69, 0.322);
+    
+    text-align: center;
+} */
+
+
+/* // btn add */
+.add__btn {
+    /* font-size: 35px; */
+    background: none;
+    /* height: 9rem; */
+    
+    border: none;
+    color: #28B9B5;
+    cursor: pointer;
+    
+    /* display: inline-block;
+    vertical-align: middle; 
+     line-height: 1.1;
+    
+    margin-left: 10px; */
+   
+}
+
+#add__container .add__btn{
+    /* line-height: 1 !important; */
+    margin-bottom: .3rem;
+    /* color: red; */
+
+}
+
+.ion-ios-checkmark-outline{
+    font-size: 2rem;
+    /* border: none; */
+    /* margin-bottom: 5rem; */
+}
+
+.add__btn:active {
+    transform: translateY(2px);
+}
+
+.add__btn:focus { outline: none; }
+
+#add__container{
+    background-color: #f7f7f7;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+#add__container > * {
+    height: 2rem;
+    margin: 0 1rem;
+    border-radius: .3rem;
+   
+}
+
+
+
+.add__description,
+.add__value{
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    border: 1.5px solid #e7e7e7;
+    transition: border 0.3s;
+}
+
+.add__type:focus,
+.add__description:focus,
+.add__value:focus {
+    outline: none;
+    border: 1.5px solid #28B9B5;
+}
+
+.add__type{
+    background-color: #fff;
+    font-weight: 300;
+    width: 2.5rem;
+    padding-top: .3rem;
+}
+
+input::placeholder{
+    color: #28B9B5;
+}
+
+.add__value,
+.add__description{
+    padding: 1rem;
+    text-align: center;
+    /* color: red; */
+}
+
+.add__btn{
+    border: none;
+    /* margin-bottom: 5rem; */
+}
+
+/* -------LISTS */
+.container-info{
+    display: flex;
+    width: 100%;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    /* align-items: center; */
+    /* margin: 2rem; */
+}
+
+.container-info .income,
+.container-info .expenses{
+    /* margin: 1rem auto 1rem 9rem; */
+    /* margin: auto; */
+    margin : 0 auto;
+    padding: 1rem;
+    width: 25rem;
+}
+
+
+h2{
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+
+.icome__title { color: #28B9B5; }
+.expenses__title { color: #FF5049; }
+
+.income__list,
+.expenses__list{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+    /* align-items: stretch; */
+
+}
+
+
+.item{
+    display: flex;
+    padding: .5rem;
+    border-bottom: 1px solid #e7e7e7;
+    width: 100%;
+    /* font-size: 2rem; */
+    justify-content: space-between;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    
+}
+
+.item .item__delete{
+    /* width: 5rem; */
+    flex-shrink: 5;
+    flex-grow: 0;
+}
+
+.item:first-child { border-top: 1px solid #e7e7e7; }
+.item:nth-child(even) { background-color: #f7f7f7; }
+
+.item__value {
+    transition: transform 0.3s;
+}
+
+.item__percentage {
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.item .item__description,
+.item .item__value{
+    width: 10rem;
+    justify-content: flex-start;
+    font-size: .9rem;
+}
+
+
+
+.income .item__value,
+.income .item__delete--btn {
+    color: #28B9B5;
+}
+
+.expenses .item__value,
+.expenses .item__percentage,
+.expenses .item__delete--btn {
+    color: #FF5049;
+}
+
+/* .item__delete{
+    width: 2rem;
+} */
+
+.item__delete--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item__delete--btn:focus { outline: none; }
+.item__delete--btn:active { transform: translateY(2px); }
+
+.item:hover .item__delete--btn { display: block; }
+.item:hover .item__value { transform: translateX(-20px); }
+.item:hover .item__percentage { transform: translateX(-20px); }
+
+
+/* ALIGNMENT OF TEXT */
+.expenses__list .item .item__value {
+    text-align: right;
+}
+
+.income__list .item .item__value {
+    text-align: right;
+}
+
+/* .red-focus {
+    outline: none;
+    transition: border 0.3s !important;
+} */
+/* new */
+
+/* .income,
+.expenses {
+   
+} */
+
+
+.income .income__list .item:hover{
+    /* background-color: rgba(0,39, 49, 0.322); */
+    background: linear-gradient(to left, #fff, rgba(0,39, 49, 0.322) );
+    /* color: #0c030a91; */
+    border-radius: .5rem;
+    
+    
+}
+
+.expenses__list .item:hover{
+    /* background-color: rgba(0,39, 49, 0.322); */
+    background: linear-gradient(to right,  #fff, rgba(0,39, 49, 0.322));
+    /* color: red; */
+    border-radius: .5rem;
+    
+    
+}
+
+.item .item__delete--btn:hover{
+    color: #313838;
+}
+
+.budget__income--text
+{
+    color: black;
+    font-weight: 600;
+   /* border : 1px solid black; */
+    /* border-radius: .5rem 0 0 .5rem; */
+}
+
+.budget__expenses--text{
+    color: white;
+    font-weight: 300;
+}
+
+
+
+
+
+/* select:focus{
+    
+    transition: border .5s;
+} */
